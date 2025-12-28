@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Karadeniz Çevre Kahramanları - 10 Aşamalı Oyun (Mobil Uyumlu)</title>
+
+<link href="css/style.css" rel="stylesheet"/></head>
+<body>
+<div class="wrap">
+<header>
+<h1><span class="logoBubble">🌈</span> Karadeniz Çevre Kahramanları</h1>
+<div class="meta">
+<div class="pill">Seviye: <strong id="uiLevel">1</strong>/10</div>
+<div class="pill">Rozet: <strong id="uiBadges">0</strong>/10</div>
+<div class="pill">Puan: <strong id="uiScore">0</strong></div>
+<div class="pill" id="missionPill" style="display:none;">
+          📌 Görev var!
+          <button class="tinyBtn" id="btnMission">Bak</button>
+</div>
+<div class="pill">
+          Albüm <strong id="uiAlbum">0</strong>/10
+          <button class="tinyBtn" id="btnAlbum">Aç</button>
+</div>
+<div class="pill">
+          Ses: <strong id="uiSound">Açık</strong>
+<button class="tinyBtn" id="btnSound">Değiştir</button>
+</div>
+<div class="pill">
+          Anlatım: <strong id="uiVoice">Açık</strong>
+<button class="tinyBtn" id="btnVoice">Değiştir</button>
+</div>
+</div>
+</header>
+<aside class="left">
+<div class="nav" id="levelList"></div>
+<div class="controls">
+<button id="btnReset" title="İlerlemeyi sıfırlar">Sıfırla</button>
+<button id="btnTeacher" title="Öğretmen Modu: tüm seviyeleri aç">Öğretmen Modu</button>
+</div>
+</aside>
+<main class="right">
+<div class="card">
+<div class="topbar">
+<div>
+<h2 id="title">Seviye</h2>
+<div class="desc" id="desc"></div>
+</div>
+<div class="hud">
+<div class="pill">Hedef: <strong id="uiGoal">-</strong></div>
+<div class="pill">Süre: <strong id="uiTime">-</strong></div>
+</div>
+</div>
+<div class="stageWrapper">
+<div aria-live="polite" class="stage" id="stage">
+<div class="toast" id="toast"></div>
+<div class="hint" id="hint"></div>
+</div>
+<button class="btn primary" id="btnStart">Başlat</button>
+</div>
+</div>
+</main>
+</div>
+<div class="overlay" id="overlay">
+<div aria-labelledby="modalTitle" aria-modal="true" class="modal" role="dialog">
+<div class="modalHead">
+<h3 id="modalTitle">Bilgi</h3>
+<button class="btn" id="btnCloseOverlay">Kapat ✖</button>
+</div>
+<div class="modalBody" id="modalBody"></div>
+<div class="modalFoot" id="modalFoot"></div>
+</div>
+</div>
+
+<script defer src="js/app.core.js"></script>
+<script defer src="js/app.audio.js"></script>
+<script defer src="js/app.fx.js"></script>
+<script defer src="js/app.ui.js"></script>
+<script defer src="js/app.games.js"></script>
+<script defer src="js/app.main.js"></script>
+</body>
+</html>
